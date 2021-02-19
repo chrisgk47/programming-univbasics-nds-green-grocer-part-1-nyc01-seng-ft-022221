@@ -11,9 +11,7 @@ end
 
 def consolidate_cart(cart)
   new_cart = []
-  count = 0
   cart.each do |product|
-    while count < cart.length do
       if new_cart.include?(product[:item])
         new_cart << product
         new_cart[product][:count] += 1
@@ -25,7 +23,6 @@ def consolidate_cart(cart)
           :count => 1
         }
       end
-      count += 1
     end
   end
   new_cart
