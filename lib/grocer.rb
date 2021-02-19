@@ -14,6 +14,7 @@ end
 def consolidate_cart(cart)
   new_cart = []
   cart.each do |product|
+    binding.pry
       if new_cart.include?(product[:item])
         new_cart << product
         new_cart[product][:count] += 1
